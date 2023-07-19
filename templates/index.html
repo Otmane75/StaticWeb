@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page in HTML with CSS Code Example</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+
+                <p><a href="{{ url_for('page1') }}">Go to Page 1</a></p>
+                <p><a href="{{ url_for('page2') }}">Go to Page 2</a></p>
+                <h1>Cabinet Dentaire Maamoura</h1>
+                <p>Login pour acceder a la page de gestion des operations
+                </p>
+
+            </div>
+        </div>
+
+
+        <div class="right">
+            <h5>Login</h5>
+            <p>Don't have an account? <a href="#">Creat Your Account</a> it takes less than a minute</p>
+            <form action="{{ url_for('login') }}" method="post">
+                <div class="inputs">
+                    <input type="text" name="username" placeholder="Username">
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+
+                <br><br>
+
+                <div class="remember-me--forget-password">
+                    <label>
+                        <input type="checkbox" name="remember_me" checked />
+                        <span class="text-checkbox">Remember me</span>
+                    </label>
+                    <p>Forgot password?</p>
+                </div>
+
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- partial -->
+
+</body>
+
+</html>
